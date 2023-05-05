@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestRunner.CucumberRunner$CucumberRunnerTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-05T11:30:00" hostname="DESKTOP-KCCH660" time="42.683">
+  <properties/>
+  <testcase name="runScenario[0](&quot;User can Register with valid value&quot;, &quot;Optional[Register]&quot;)" classname="TestRunner.CucumberRunner$CucumberRunnerTests" time="42.683"/>
+  <system-out><![CDATA[
+@smoke
+Scenario Outline: User can Register with valid value            # src/test/resources/Feature/login.feature:13
+  Given Base url is provided                                    # StepDefinition.RegisterStepdefs.baseUrlIsProvided()
+  When user 'Manotosh' and 'Halder' and 'manotosh.10@gmail.com' # StepDefinition.RegisterStepdefs.userFirstNameAndLastNameAndEmail(java.lang.String,java.lang.String,java.lang.String)
+  And enter '123456' and '123456'                               # StepDefinition.RegisterStepdefs.enterPasswordAndRepeatPassword(java.lang.String,java.lang.String)
+  And click Register                                            # StepDefinition.RegisterStepdefs.clickRegister()
+  Then user login home page                                     # StepDefinition.RegisterStepdefs.userLoginHomePage()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 63220
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 5:30:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+May 05, 2023 5:30:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: a no-op implementation
+May 05, 2023 5:30:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 112.
+May 05, 2023 5:30:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
